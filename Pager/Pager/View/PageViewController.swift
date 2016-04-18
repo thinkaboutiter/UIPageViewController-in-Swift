@@ -10,6 +10,18 @@ import UIKit
 
 class PageViewController: UIPageViewController {
 
+    // MARK: - Properties
+    
+    private(set) lazy var orderedViewControllers: [UIViewController] = {
+        return [
+            self.newColoredViewController("Red"),
+            self.newColoredViewController("Green"),
+            self.newColoredViewController("Blue")
+        ]
+    }()
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,7 +32,6 @@ class PageViewController: UIPageViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -31,6 +42,12 @@ class PageViewController: UIPageViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Configuration
+    
+    private func newColoredViewController(color: String) -> UIViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("\(color)ViewController")
+    }
 }
 
 extension PageViewController: UIPageViewControllerDataSource {
