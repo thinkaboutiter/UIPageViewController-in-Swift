@@ -105,4 +105,17 @@ extension PageViewController: UIPageViewControllerDataSource {
         
         return self.orderedViewControllers[nextIndex]
     }
+    
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return self.orderedViewControllers.count
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        guard let firstViewController = self.viewControllers?.first,
+            firstViewControllerIndex = self.orderedViewControllers.indexOf(firstViewController) else {
+                return 0
+        }
+        
+        return firstViewControllerIndex
+    }
 }
