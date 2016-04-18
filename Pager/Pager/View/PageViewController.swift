@@ -26,6 +26,13 @@ class PageViewController: UIPageViewController {
         super.viewDidLoad()
 
         self.dataSource = self
+        
+        if let firstVC = self.orderedViewControllers.first {
+            self.setViewControllers([firstVC],
+                                    direction: .Forward,
+                                    animated: true,
+                                    completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,10 +60,49 @@ class PageViewController: UIPageViewController {
 extension PageViewController: UIPageViewControllerDataSource {
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        return nil
+        
+        // `vcIndex`
+        guard let vcIndex = self.orderedViewControllers.indexOf(viewController) else {
+            return nil
+        }
+        
+        // `previousIndex`
+        let previousIndex = vcIndex - 1
+        
+        // check on `previousIndex`
+        // User is on the first view controller and swiped left to loop to
+        // the last view controller.
+        guard previousIndex >= 0 else {
+            return nil
+        }
+        
+        // check
+        guard self.orderedViewControllers.count > previousIndex else {
+            return nil
+        }
+        
+        return self.orderedViewControllers[previousIndex]
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        return nil
+        
+        guard let vcIndex = self.orderedViewControllers.indexOf(viewController) else {
+            return nil
+        }
+        
+        let nextIndex = vcIndex + 1
+        let orderedVCsCount = self.orderedViewControllers.count
+        
+        // User is on the last view controller and swiped right to loop to
+        // the first view controller.
+        guard orderedVCsCount != nextIndex else {
+            return nil
+        }
+        
+        guard orderedVCsCount > nextIndex else {
+            return nil
+        }
+        
+        return self.orderedViewControllers[nextIndex]
     }
 }
