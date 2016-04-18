@@ -1,5 +1,5 @@
 //
-//  PageViewController.swift
+//  GreenViewController.swift
 //  Pager
 //
 //  Created by boyankov on W16 18/04/2016 Mon.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController {
+class GreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,10 +8,64 @@
         <!--Page View Controller-->
         <scene sceneID="g54-bB-a1E">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="ZHK-cv-AgJ" customClass="PageViewController" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ZHK-cv-AgJ" customClass="PageViewController" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oiz-zK-Nni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="293" y="591"/>
+            <point key="canvasLocation" x="421" y="-7"/>
+        </scene>
+        <!--Green View Controller-->
+        <scene sceneID="4fi-49-1KV">
+            <objects>
+                <viewController storyboardIdentifier="GreenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SMi-CM-Iqg" customClass="GreenViewController" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hxN-BI-2Xn"/>
+                        <viewControllerLayoutGuide type="bottom" id="yd4-HR-da7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LUC-bD-gc9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lId-4R-Sok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="421" y="758"/>
+        </scene>
+        <!--Red View Controller-->
+        <scene sceneID="CZP-Np-UrM">
+            <objects>
+                <viewController storyboardIdentifier="RedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gSw-8o-bU7" customClass="RedViewController" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fD3-hI-hMC"/>
+                        <viewControllerLayoutGuide type="bottom" id="RbJ-Ih-f9n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Mz-73-TYi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlE-jA-GIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="758"/>
+        </scene>
+        <!--Blue View Controller-->
+        <scene sceneID="A6Y-M9-sCa">
+            <objects>
+                <viewController storyboardIdentifier="BlueViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rs2-Iz-LSD" customClass="BlueViewController" customModule="Pager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IhW-rY-lBy"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5L-oW-HnN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VjA-i0-UQC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja1-6P-NHP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071" y="758"/>
         </scene>
     </scenes>
 </document>
